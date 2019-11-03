@@ -39,7 +39,10 @@ public class DuplicateCounter {
                 }
             }
             fileReader.close();
-        }catch(FileNotFoundException NotFound){
+        }
+        
+        catch(FileNotFoundException NotFound)
+        {
             System.out.println("File " + dataFile + " not found!");
             System.exit(1);
         }
@@ -60,9 +63,12 @@ public class DuplicateCounter {
             printw.flush();
             filew.close();
             printw.close();
-        } catch (IOException err) {
+        }
+        catch (IOException err) 
+        {
             System.out.println("Error in writing towards " + outputFile + ": " + err.getMessage());
             System.exit(1);
+            //catch unsuccessful termination
         }
     }
 }
